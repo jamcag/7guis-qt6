@@ -6,8 +6,6 @@
 #include <QLineEdit>
 #include <QDoubleValidator>
 
-#include <iostream>
-
 int main(int argc, char **argv) {
   QApplication app(argc, argv);
 
@@ -40,18 +38,14 @@ int main(int argc, char **argv) {
   window.setLayout(&mainLayout);
 
   QObject::connect(&celsiusInput, &QLineEdit::textEdited, [&]() {
-    std::cout << "," << std::flush;
     const double celsius = celsiusInput.text().toDouble();
     const double fahrenheit = (celsius * (9.0 / 5.0)) + 32.0;
     fahrenheitInput.setText(QString::number(fahrenheit));
   });
 
   QObject::connect(&fahrenheitInput, &QLineEdit::textEdited, [&]() {
-    std::cout << "." << std::flush;
     const double fahrenheit = fahrenheitInput.text().toDouble();
-    std::cout << "fahrenheit=" << fahrenheit << std::endl;
     const double celsius = (fahrenheit - 32.0) * (5.0 / 9.0);
-    std::cout << "celsius=" << celsius << std::endl;
     celsiusInput.setText(QString::number(celsius));
   });
 
