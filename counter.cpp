@@ -2,7 +2,7 @@
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
-#include <QVBoxLayout>
+#include <QHBoxLayout>
 
 int main(int argc, char **argv) {
   QApplication app(argc, argv);

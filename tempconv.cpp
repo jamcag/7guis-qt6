@@ -2,7 +2,7 @@
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
-#include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QLineEdit>
 #include <QDoubleValidator>
 
