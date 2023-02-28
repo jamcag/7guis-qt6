@@ -14,10 +14,15 @@ find_package(Qt6 COMPONENTS
         REQUIRED
 )
 
-add_executable(7guis_qt main.cpp)
-target_link_libraries(7guis_qt
+add_executable(counter counter.cpp)
+target_link_libraries(counter
         Qt::Core
         Qt::Gui
         Qt::Widgets
 )
 
+add_executable(tempconv tempconv.cpp)
+target_link_libraries(tempconv
+        Qt::Core
+        Qt::Gui
+        Qt::Widgets)
